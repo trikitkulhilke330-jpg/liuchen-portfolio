@@ -10,8 +10,8 @@ let _factoryPromise = null;
 function ensureBallpit() {
   if (_factoryPromise) return _factoryPromise;
   _factoryPromise = (async () => {
-    const THREE = await import('https://esm.sh/three@0.160.0');
-    const RoomMod = await import('https://esm.sh/three@0.160.0/examples/jsm/environments/RoomEnvironment.js');
+    const THREE = await import('three');
+    const RoomMod = await import('three/addons/RoomEnvironment.js');
 
     const {
       Vector3: a, MeshPhysicalMaterial: c, InstancedMesh: d, Clock: e, AmbientLight: f,
